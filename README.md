@@ -25,10 +25,10 @@ untouched test set -> plots, reports, predictions.
 | `outputs/evaluation/` | metrics table, classification reports, confusion matrices, ROC curves, metric comparison, test predictions |
 
 ## Team contributions
-| Member | Load | Files |
+| Member | Files | Responsibility |
 |---|---|---|
-| 1 | Large |TBD|
-| 2 | Large | TBD |
-| 3 | Small | TBD |
-| 4 | Small | TBD |
-| 5 | Small | TBD |
+| **M1 (Yajat)** | `src/evaluation.py`, `src/visualizations.py`, `src/svm_models.py` | Linear/Polynomial/RBF SVM pipelines and grids; test-set metrics, classification reports and saved predictions; confusion-matrix, ROC, metric-comparison and PCA plots |
+| **M2 (Aditya)** | `src/mlp_model.py`, `src/model_training.py`, `src/__init__.py` | MLP pipeline, grid and architecture/convergence analysis; cross-validated tuning of all models with convergence-warning tracking; package setup |
+| **M3 (Sai)** | `src/data_loader.py`, `src/preprocessing.py` | Dataset loading and validation; stratified split and leakage-safe scaling pipeline builder |
+| **M4 (Varun)** | `src/eda.py`, `src/config.py` | Exploratory data analysis and figures; project-wide constants, paths, class names, warning filters and plot theme |
+| **M5 (Abhishek)** | `main.py`, `README.md` (and `requirements.txt`) | Pipeline orchestration, final summary and output listing; project documentation and dependency list |
