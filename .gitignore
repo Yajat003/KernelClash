@@ -1,1 +1,4 @@
 .venv_sam/
+__pycache__/
+*.py[cod]
+*$py.class
