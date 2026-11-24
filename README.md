@@ -1,15 +1,34 @@
-# Assignment 7: Support Vector Machines and Neural Networks
+# SVM Kernels and MLP (Backpropagation) – Banknote Authentication
 
-## Objective
-Implement and compare Support Vector Machines (SVM) with different kernel functions and a Multi-Layer Perceptron (MLP) neural network using the **UCI Banknote Authentication dataset**.
+Compares Linear, Polynomial and RBF SVMs with a two-hidden-layer MLP on the
+UCI Banknote Authentication dataset (4 attributes, class 0 = authentic, 1 = fake).
 
-## Work to Be Done (Current Phase)
-- Load and explore the dataset.
-- Perform necessary preprocessing and feature scaling.
-- Train SVM models using Linear, Polynomial, and RBF kernels.
-- Implement and train an MLP classifier.
-- Tune model hyperparameters using cross-validation.
-- Evaluate and compare models using Accuracy, Precision, Recall, F1-score, and ROC-AUC.
-- Generate visualizations to analyse model performance and convergence.
+## Setup
+```bash
+pip install -r requirements.txt
+```
+Place `data_banknote_authentication.txt` in `data/`, then run from the project root:
+```bash
+python main.py
+```
 
-**Current focus:** Complete the Python implementation, execute the models, and generate the required evaluation results and visualizations. The theoretical discussion and assignment report will be prepared separately.
+## Pipeline
+And load & validate -> EDA -> stratified 75/25 split -> scaling inside pipelines
+(no leakage) -> 5-fold CV grid search (F1) for 3 SVMs + MLP -> check on the
+untouched test set -> plots, reports, predictions.
+
+## Outputs
+| Folder | Contents |
+|---|---|
+| `outputs/eda/` | class distribution, feature distributions, correlation heatmap, PCA projection |
+| `outputs/models/` | `hyperparameter_tuning_results.csv`, MLP loss curve (png + csv) |
+| `outputs/evaluation/` | metrics table, classification reports, confusion matrices, ROC curves, metric comparison, test predictions |
+
+## Team contributions
+| Member | Load | Files |
+|---|---|---|
+| 1 | Large |TBD|
+| 2 | Large | TBD |
+| 3 | Small | TBD |
+| 4 | Small | TBD |
+| 5 | Small | TBD |
